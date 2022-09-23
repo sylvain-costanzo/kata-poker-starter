@@ -9,8 +9,10 @@ import java.util.List;
  */
 public class Hand {
     private List<Card> cards;
-
     public Hand(List<Card> cards) {
+        if (cards.size() != 5) {
+            throw new IllegalArgumentException("Hand must have 5 cards");
+        }
         this.cards = cards;
     }
 
